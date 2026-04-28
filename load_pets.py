@@ -1,7 +1,14 @@
 """
 I broke up the code into multiple lines because that is also how we did that in IS 361. I used 
 "connection.close()" at the end instead of the with block from the weekly readings because that
-too is something I learned while working on an assignment for another course.
+too is something I learned while working on an assignment for another course. I put the SQL code 
+inside a string because that is how I did it in another course.
+
+To answer the question on what person_pet does, the answer is that it serves as the junction table
+that is used to store the primary keys of the other two tables. This way, the two tables can be
+connected. The weekly materials say that junction tables can be used for many-to-many relationships,
+but in this case, it appears we have only one-to-one or one-to-many relationships (these other relationship
+types were also covered in IS 361). 
 """
 
 import sqlite3

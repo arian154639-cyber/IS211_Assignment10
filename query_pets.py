@@ -3,7 +3,8 @@ I broke up the code into multiple lines because that is also how we did that in 
 "connection.close()" at the end instead of the with block from the weekly readings because that
 too is something I learned while working on an assignment for another course. I used if/elif/else
 for this script because we needed to handle -1 entires, non-numeric entries, and valid entires. 
-This implementation is basic, there was another method but I thought this was fine. 
+This implementation is basic, there was another method but I thought this was fine. I put the SQL 
+code inside a string because that is how I did it in another course.
 """
 
 import sqlite3

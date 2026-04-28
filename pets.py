@@ -2,7 +2,8 @@
 I used "DROP TABLE IF EXISTS" because we were taught that in IS 361. I also broke up the code into
 multiple lines because that is also how we did that in IS 361. I used "connection.close()" at the end
 instead of the with block from the weekly readings because that too is something I learned while working
-on an assignment for another course.
+on an assignment for another course. I put the SQL code inside a string because that is how I did it in 
+another course.
 """
 
 import sqlite3
