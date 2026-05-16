@@ -7,7 +7,8 @@ This implementation is basic, there was another method but I thought this was fi
 code inside a string because that is how I did it in another course.
 
 Note: Refactored to do type conversion and close connections. I did type conversion here because it's
-a small assignment so type conversion in just one place doesn't take long to implement.
+a small assignment so type conversion in just one place doesn't take long to implement. I sent an email
+about refactoring this assignment on May 15th.
 """
 
 import sqlite3
