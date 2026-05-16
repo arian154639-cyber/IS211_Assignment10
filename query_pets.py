@@ -1,14 +1,13 @@
 """
 I broke up the code into multiple lines because that is also how we did that in IS 361. I used 
-"connection.close()" at the end instead of the with block from the weekly readings because that
-too is something I learned while working on an assignment for another course. I used if/elif/else
-for this script because we needed to handle -1 entires, non-numeric entries, and valid entires. 
-This implementation is basic, there was another method but I thought this was fine. I put the SQL 
-code inside a string because that is how I did it in another course.
+if/elif/else for this script because I determined we needed to handle -1 entires, non-numeric 
+entries, and valid entires. This implementation is simple, there was another method but I thought 
+this was fine. I put the SQL code inside a string because that is how I did it in another course.
 
-Note: Refactored to do type conversion and close connections. I did type conversion here because it's
-a small assignment so type conversion in just one place doesn't take long to implement. I sent an email
-about refactoring this assignment on May 15th.
+Note: Refactored to have "connection.close()", which was used for closing the connection as I learned
+that in another course. I forgot to include that in the original version. I also did type conversion 
+in the refactor because this was a small script but I removed that. I sent an email on May 15th about
+refactoring this assignment.
 """
 
 import sqlite3
@@ -26,7 +25,6 @@ def main():
             print("Input must be a number.")
             continue
         else:
-            person_id = int(user_input)
             cursor.execute ("""
             SELECT
             person.first_name,
@@ -40,7 +38,7 @@ def main():
             JOIN person_pet ON person.id = person_pet.person_id
             JOIN pet ON pet.id = person_pet.pet_id
             WHERE person.id = ?
-            """, (person_id,))
+            """, (user_input,))
 
             data = cursor.fetchall()
 
